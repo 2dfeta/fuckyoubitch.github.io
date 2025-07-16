@@ -2,20 +2,29 @@
 <html>
 
 <head>
-<title>My Web Page</title>
+  <title>My Web Page</title>
 </head>
 <body>
-    <h1>Địt mẹ Đanh ngu cặc</h1>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_self" title=" muốn chửi t à? ">
-        click here to fuck VietDz
-    </a>
-  
+
+  <button onclick="DoSomething()">Click here</button>
+
+  <p id="demo">Danhngucac</p>
+
+  <div id="linkContainer"></div> <!-- nơi để chèn link -->
+
+  <script>
+    function DoSomething() {
+      // Thay đổi nội dung thẻ <p>
+      document.getElementById("demo").innerHTML = "cay chứ?";
+
+      // Tạo link mới và chèn vào <div id="linkContainer">
+      document.getElementById("linkContainer").innerHTML = `
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1&ab_channel=RickAstley" target="_self">
+          Bấm để fuck Vietdz
+        </a>
+      `;
+    }
+  </script>
+
 </body>
-
 </html>
-
-
-
-
-
-

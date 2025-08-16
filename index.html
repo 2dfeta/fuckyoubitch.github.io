@@ -1,53 +1,35 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="vi">
 <head>
-  <title>Tao đang tập code website ok?</title>
-  <style>
-  button {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: darkred;
-  }
-
-  a {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 18px;
-    color: blue;
-    text-decoration: underline;
-  }
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VietDz A.I</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <button height="500" onclick="DoSomething()">Click here </button>
-
-  <h1 id="demo">Djtmemay bấm vào nút bên trên đi con chó đanh ngu cặc!</h1>
-  <div id="linkContainer"></div> <!-- nơi để chèn link -->
-
-  <script>
-    function DoSomething() {
-      // Thay đổi nội dung thẻ <p>
-      document.getElementById("demo").innerHTML = " Đmm cay chứ?";
-
-      // Tạo link mới và chèn vào <div id="linkContainer">
-      document.getElementById("linkContainer").innerHTML = `
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1&ab_channel=RickAstley" target="_self">
-          Bấm để fuck Vietdz
-        </a>
-      `;
-    }
-  </script>
-
+  <div class="app-container">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <h2>VietDz A.I</h2>
+        <button id="new-chat-btn">+ New Chat</button>
+      </div>
+      <div class="history">Lịch sử (demo)</div>
+    </div>
+    <button class="sidebar-toggle" id="sidebar-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="main">
+      <div class="chat-header">VietDz A.I</div>
+      <div id="chat-output" class="chat-output"></div>
+      <div class="chat-input-area">
+        <textarea id="chat-input" placeholder="Hỏi bất cứ điều gì, VietDz A.I luôn sẵn sàng!" rows="1"></textarea>
+        <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+      </div>
+      <div class="chat-footer-note">VietDz = real &nbsp;&nbsp; ? = real</div>
+    </div>
+  </div>
+  <script src="demo2.js"></script>
 </body>
 </html>

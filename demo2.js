@@ -46,7 +46,7 @@ function appendMessage(text, type, loading = false) {
 }
 
 // === API CONFIG ===
-const apiKey = "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"; // 🔹 Thay bằng key thật từ https://openrouter.ai/
+const apiKey = "hello"; // 🔹 Thay bằng key thật từ https://openrouter.ai/
 const apiUrl = "https://openrouter.ai/api/v1/chat/completions";
 
 async function callAI(userMessage, retryCount = 0) {
@@ -102,4 +102,5 @@ function newChat() {
   chatOutput.innerHTML = "";
 }
 document.getElementById("new-chat-btn").addEventListener("click", newChat);
+
 

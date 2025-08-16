@@ -60,8 +60,6 @@ async function callAI(userMessage, retryCount = 0) {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${apiKey}`,
-        "HTTP-Referer": "https://yourwebsite.com", // tùy chọn
-        "X-Title": "VietDz A.I" // tùy chọn
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo", // Hoặc model free khác
@@ -104,3 +102,4 @@ function newChat() {
   chatOutput.innerHTML = "";
 }
 document.getElementById("new-chat-btn").addEventListener("click", newChat);
+

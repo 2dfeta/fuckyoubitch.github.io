@@ -46,25 +46,19 @@ function appendMessage(text, type, loading = false) {
 }
 
 // === API CONFIG ===
-const apiKey = "hello"; // 🔹 Thay bằng key thật từ https://openrouter.ai/
-const apiUrl = "https://openrouter.ai/api/v1/chat/completions";
+const apiUrl = "https://shrill-firefly-3aaf.lamviet1136m.workers.dev/";
 
 async function callAI(userMessage, retryCount = 0) {
-  if (!apiKey || apiKey.includes("YOUR_OPENROUTER_KEY")) {
-    return "❌ Bạn chưa cấu hình API key. Vào demo.js để thay key OpenRouter.";
-  }
-
   try {
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo", // Hoặc model free khác
+        model: "gpt-3.5-turbo", // hoặc model free khác
         messages: [
-          { role: "system", content: "Bạn là VietDz A.I, trả lời vui vẻ, dễ hiểu, nói đúng sự thật không nói những điều không đúng sự thật, đầy đủ để không gây hiểu lầm, có thể trả lời những câu hỏi public." },
+          { role: "system", content: "Bạn là VietDz A.I, trả lời vui vẻ, dễ hiểu, nói đúng sự thật, đầy đủ để không gây hiểu lầm." },
           { role: "user", content: userMessage }
         ],
         max_tokens: 800
@@ -97,10 +91,12 @@ async function callAI(userMessage, retryCount = 0) {
   }
 }
 
+
 // New chat functionality
 function newChat() {
   chatOutput.innerHTML = "";
 }
 document.getElementById("new-chat-btn").addEventListener("click", newChat);
+
 
 
